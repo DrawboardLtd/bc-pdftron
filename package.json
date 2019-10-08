@@ -1,0 +1,19 @@
+{
+  "name": "bc-pdftron",
+  "version": "0.1.0",
+  "description": "BC pdftron",
+  "main": "index.js",
+  "files": [
+    "pdftron"
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "github.com/Kraoz/bc-pdftron"
+  },
+  "keywords": [
+    "Drawboard"
+  ],
+  "author": "Kraoz",
+  "license": "MIT"
+}
