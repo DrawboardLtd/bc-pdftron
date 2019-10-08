@@ -8,9 +8,8 @@
   ],
   "scripts": {
     "clean": "rimraf dist",
-    "build:lib": "babel src -d lib",
     "build:umd": "webpack index.js dist/bc-pdtron.min.js --config webpack.config.js",
-    "build": "npm run build:lib && npm run build:umd:min",
+    "build": "npm run build:umd",
     "prepublish": "npm run clean && npm run build"
   },
   "repository": {
