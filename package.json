@@ -2,7 +2,7 @@
   "name": "bc-pdftron",
   "version": "0.1.0",
   "description": "BC pdftron",
-  "main": "dist/index.js",
+  "main": "dist/bc-pdtron.min.js",
   "files": [
     "dist"
   ],
