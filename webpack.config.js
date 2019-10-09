@@ -4,32 +4,24 @@ var webpack = require("webpack");
 
 module.exports = {
   module: {
-    loaders: [
-      { test: /\.js$/, loaders: ["babel-loader"], exclude: /node_modules/ }
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"]
+          }
+        }
+      }
     ]
   },
 
+  entry: "./index.js",
+
   output: {
-    library: "Uuid",
+    library: "bcPdftron",
     libraryTarget: "umd"
-  },
-
-  resolve: {
-    extensions: ["", ".js"]
-  },
-
-  plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("production")
-    })
-
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compressor: {
-    //     screw_ie8: true,
-    //     warnings: false
-    //   }
-    // })
-  ]
+  }
 };
